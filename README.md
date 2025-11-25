@@ -35,7 +35,7 @@ There are three main structs: Employee, Department, and JoinedRecord. Each one h
 Functions like create_employee and create_department use malloc to make room for a new node. They copy the name strings safely and fill in the data. If there’s not enough memory, they handle it.
 
 ##### Insertion : 
-Employees and departments are added at the head of the list (head-insertion), so it’s fast—O(1) time.
+Employees and departments are added at the head of the list (head-insertion).
 
 ##### Display : 
 You can print the employee or department lists in a nice table by traversing the links.
