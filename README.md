@@ -1,6 +1,6 @@
 # C-project
 
-Project Report: Employee Data Manager (C Language)
+## Project Report: Employee Data Manager (C Language)
 
 1. Project Overview: Employee Data Manager
 
