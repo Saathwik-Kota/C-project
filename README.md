@@ -118,4 +118,4 @@ Walks through the JoinedRecord list and prints out the combined employee and dep
 main() : 
 Sets up the employee and department list heads, loads data from disk, runs the main application loop (using display_menu and a switch for user actions), and saves everything plus cleans up on exit. Input: none. Output: int (exit status). This is where everything starts and gets managed.
 
-THANK YOU!
+## THANK YOU!
