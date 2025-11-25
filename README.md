@@ -2,11 +2,11 @@
 
 ## Project Report: Employee Data Manager (C Language)
 
-1. Project Overview: Employee Data Manager
+### 1. Project Overview: Employee Data Manager
 
 The Employee Data Manager is a command-line app written in C. It helps you keep track of employees and departments—basically, it’s a simple record system. At its core, it uses singly linked lists to store both employee and department info. You can add, view, update, and delete records, just like a basic database. There’s also a JOIN feature that lets you see which employee belongs to which department, matching them up by dept_id. And so you don’t lose your data, it saves everything to CSV files (employees.csv and departments.csv) when you quit, and loads them back up when you start.
 
-2. Explanation of functionalities
+### 2. Explanation of functionalities
 
 Data Persistence : 
 The app loads all your employee and department data from CSV files when you start it up. When you’re done, you can save everything back to those files. So, nothing disappears between sessions.
@@ -23,7 +23,7 @@ This feature combines the data from the employee and department lists by matchin
 Memory Management :
  The program uses dynamic allocation for strings and nodes, and it also frees up memory whenever required, preventing any memory leaks.
 
-3. Step by Step implementation of functionalities
+### 3. Step by Step implementation of functionalities
 
 A. Linked Lists
 
@@ -65,7 +65,7 @@ save_employees and save_departments open their files in write mode, walk through
 Loading :  
 When load_employees or load_departments runs, it opens the file in read mode (“r”). First, it wipes out any existing list by calling free_employee_list or free_department_list—this stops memory leaks and keeps us from loading the same data twice. Then, it grabs each line with fgets and uses a mix of string functions (strchr, strrchr, strncpy) and sscanf to break down the data. Names are wrapped in quotes, so it has to handle those carefully. For every line it parses, it calls the right create_ function and adds the new node to the list.
 
-4. Breakdown of Contributions  
+### 4. Breakdown of Contributions  
 This project splits into three big parts, with each team member responsible for one :
 
 1) Data Structures & Memory Management  (N Bhargava - BA2025026)
@@ -77,7 +77,7 @@ This project splits into three big parts, with each team member responsible for 
 3) File I/O and user Interface  (G Raadhesh - BA2025014)
 -> handled saving and loading for employees and departments (save_employees, load_employees, save_departments, load_departments). They also set up the user interface functions: display_menu, the main program loop (with the switch for user choices, loading at start, saving at exit), and helper functions for input like add_department.
 
-5. Function Explanations
+### 5. Function Explanations
 
 free_employee_node(Employee *emp) : 
 Frees up memory for a single Employee node, including the name string. Takes an Employee pointer, returns nothing. It’s essential for cleaning up after deleting a single employee. free_department_node and free_joined_record_node also work in the same way.
