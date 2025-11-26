@@ -243,7 +243,7 @@ Department* find_department(Department *head, int id){
     return NULL;
 }
 
-// Uses delete_employees_by_dept and find_department to delete a department by its id and also all of the employees in that department 
+// Uses delete_employees_by_dept to delete a department by its id and also all of the employees in that department 
 void delete_department(Department **dept_head, Employee **emp_head, int id){
     Department *current = *dept_head;
     Department *prev = NULL;
@@ -503,27 +503,27 @@ int main(){
                 float salary;
                 char name[50];
                 printf("Enter Employee ID: "); 
-                if (scanf("%d", &id) != 1){
+                if (scanf("%d", &id)!=1){
                     break;
                 }
                 printf("Enter Name (without spaces): "); 
-                if (scanf("%s", name) != 1){
+                if (scanf("%s", name)!=1){
                     break;
                 }
                 printf("Enter Salary: "); 
-                if (scanf("%f", &salary) != 1){
+                if (scanf("%f", &salary)!=1){
                     break;
                 }
                 printf("Enter Department ID: "); 
-                if (scanf("%d", &dept_id) != 1){
+                if (scanf("%d", &dept_id)!=1){
                     break;
                 }
                 // Check if dept_id exists before adding employee
-                if (find_department(department_head, dept_id) == NULL) {
+                if (find_department(department_head, dept_id)==NULL){
                     printf(" Department ID %d does not exist. Employee added, but join query may not show department name\n", dept_id);
                 }
                 Employee *new_emp = create_employee(id, name, salary, dept_id);
-                if (new_emp) {
+                if (new_emp!=NULL){
                     add_employee(&employee_head, new_emp);
                     printf("Employee added\n");
                 }
@@ -543,11 +543,11 @@ int main(){
                 int id;
                 float salary;
                 printf("Enter Employee ID to update salary: "); 
-                if (scanf("%d", &id) != 1){
+                if (scanf("%d", &id)!=1){
                     break;
                 }
                 printf("Enter new Salary: "); 
-                if (scanf("%f", &salary) != 1){
+                if (scanf("%f", &salary)!=1){
                     break;
                 }
                 update_employee_salary(employee_head, id, salary);
@@ -555,7 +555,7 @@ int main(){
             case 8: // Delete Employee 
                 int id;
                 printf("Enter Employee ID to delete: ");
-                if (scanf("%d", &id) != 1){
+                if (scanf("%d", &id)!=1){
                     break;
                 }
                 delete_employee(&employee_head, id);
@@ -566,7 +566,7 @@ int main(){
             case 10: //Delete Department
                 int id;
                 printf("Enter Department ID to delete (All employes in this department will also be deleted): "); 
-                if (scanf("%d", &id) != 1){
+                if (scanf("%d", &id)!=1){
                     break;
                 }
                 delete_department(&department_head, &employee_head, id);
@@ -585,3 +585,4 @@ int main(){
     printf("THANK YOU!\n");
     return 0;
 }
+
