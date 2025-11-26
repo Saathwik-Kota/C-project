@@ -75,7 +75,7 @@ This project splits into three big parts, with each team member responsible for 
 -> built the main logic for the program: adding employees and departments, displaying lists, updating salaries, deleting employees (by id or by department), deleting departments, and the key perform_join function.
 
 #### 3) File I/O and user Interface  (G Raadhesh - BA2025014)
--> handled saving and loading for employees and departments (save_employees, load_employees, save_departments, load_departments). They also set up the user interface functions: display_menu, the main program loop (with the switch for user choices, loading at start, saving at exit), and helper functions for input like add_department.
+-> handled saving and loading for employees and departments (save_employees, load_employees, save_departments, load_departments). They also set up the user interface functions: display_menu, the main program loop (with the switch for user choices, loading at start, saving at exit), and helper functions.
 
 ### 5. Function Explanations
 
