@@ -4,12 +4,12 @@
 
 ### 1. Project Overview: Employee Data Manager
 
-The Employee Data Manager is a command-line app written in C. It helps you keep track of employees and departments—basically, it’s a simple record system. At its core, it uses singly linked lists to store both employee and department info. You can add, view, update, and delete records, just like a basic database. There’s also a JOIN feature that lets you see which employee belongs to which department, matching them up by dept_id. And so you don’t lose your data, it saves everything to CSV files (employees.csv and departments.csv) when you quit, and loads them back up when you start.
+The Employee Data Manager is a command-line program written in C. It helps you keep track of employees and departments—basically, it’s a simple record system. At its core, it uses singly linked lists to store both employee and department info. You can add, view, update, and delete records, just like a basic database. There’s also a JOIN feature that lets you see which employee belongs to which department, matching them up by dept_id. And so you don’t lose your data, it saves everything to CSV files (employees.csv and departments.csv) when you quit, and loads them back up when you start.
 
 ### 2. Explanation of functionalities
 
 #### Data Persistence : 
-The app loads all your employee and department data from CSV files when you start it up. When you’re done, you can save everything back to those files. So, nothing disappears between sessions.
+The program loads all your employee and department data from CSV files when you start it up. When you’re done, you can save everything back to those files. So, nothing disappears between sessions.
 
 #### Employee Management : 
 You can add new employees, see a list of everyone, update someone’s salary by their ID, or delete an employee by their ID.
